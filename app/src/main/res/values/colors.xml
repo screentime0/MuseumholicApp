@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary colors -->
+    <color name="primary">#6200EE</color> <!-- Purple 500 -->
+    <color name="primary_variant">#3700B3</color> <!-- Purple 700 -->
+    <color name="secondary">#03DAC5</color> <!-- Teal 200 -->
+    <color name="secondary_variant">#018786</color> <!-- Teal 700 -->
+
+    <!-- Background and surface colors -->
+    <color name="background">#FFFFFF</color> <!-- White -->
+    <color name="surface">#FFFFFF</color> <!-- White -->
+
+    <!-- Error color -->
+    <color name="error">#B00020</color> <!-- Red 600 -->
+
+    <!-- Text colors -->
+    <color name="text_primary">#000000</color> <!-- Black -->
+    <color name="text_secondary">#8A8A8A</color> <!-- Gray -->
+
+    <!-- Additional colors -->
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_500">#00796B</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="red_500">#F44336</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="pink_500">#E91E63</color>
+
+    <!-- Color Definitions -->
+    <color name="red_200">#FFCDD2</color>    <!-- Light Red -->
+    <color name="orange_200">#FFE0B2</color>  <!-- Light Orange -->
+    <color name="yellow_200">#FFF9C4</color>  <!-- Light Yellow -->
+    <color name="green_200">#C8E6C9</color>    <!-- Light Green -->
+    <color name="blue_200">#BBDEFB</color>      <!-- Light Blue -->
+    <color name="indigo_200">#C5CAE9</color>    <!-- Light Indigo -->
+    <color name="violet_200">#E1BEE7</color>    <!-- Light Violet -->
+
+    <color name="green_500">#00FF00</color>     <!-- Green -->
+    <color name="indigo_500">#4B0082</color>    <!-- Indigo -->
+    <color name="violet_500">#9400D3</color>    <!-- Violet -->
+
+    <color name="my_light_primary">#6200EE</color>
+    <color name="my_light_primary_container">#BB86FC</color>
+
+    <color name="my_light_secondary">#03DAC6</color>
+
+    <color name="my_light_background">#FFFFFF</color>
+    <color name="my_light_text_color">#000000</color>
+
+    <color name="my_dark_primary">#BB86FC</color>
+    <color name="my_dark_primary_container">#3700B3</color>
+
+    <color name="my_dark_secondary">#03DAC6</color>
+
+    <color name="my_dark_background">#121212</color>
+    <color name="my_dark_text_color">#FFFFFF</color>
+
+    <color name="colorPrimaryDark">#121212</color> <!-- Background for dark mode -->
+    <color name="colorSurface">#1F1F1F</color> <!-- Card background color -->
+    <color name="colorAccent">#D5A763</color> <!-- Accent color, typically a purple hue -->
+    <color name="colorOnSurface">#E0E0E0</color> <!-- Light text color for surface elements -->
+
+    <color name="colorInactiveDark">#1A1A1A</color>
 </resources>
+

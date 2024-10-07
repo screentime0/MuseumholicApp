@@ -25,6 +25,13 @@ android {
             )
         }
     }
+
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -40,4 +47,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Material Components Library for Material 3
+    implementation("com.google.android.material:material:1.9.0")
+
+    // AndroidX AppCompat to use AppCompatDelegate for dark mode handling
+    implementation("androidx.appcompat:appcompat:1.6.1")
+
 }
