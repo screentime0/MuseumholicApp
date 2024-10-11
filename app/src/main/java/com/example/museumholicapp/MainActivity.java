@@ -39,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new QrScannerFragment());
             } else if (item.getItemId() == R.id.browse) {
                 replaceFragment(new BrowseFragment());
+            } else if (item.getItemId() == R.id.likes) {
+                replaceFragment(new LikesFragment());
             }
+
 
             return true;
         });

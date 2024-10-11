@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:title="Home"
-        android:icon="@drawable/baseline_home_24"
-        android:id="@+id/home"/>
     <item
         android:title="Search"
-        android:icon="@drawable/baseline_search_24"
+        android:icon="@drawable/material_symbols_search"
         android:id="@+id/search"/>
     <item
-        android:title="QR_Scanner"
-        android:icon="@drawable/baseline_qr_code_scanner_24"
-        android:id="@+id/qr_scanner"/>
-    <item
         android:title="Browse"
-        android:icon="@drawable/baseline_qr_code_scanner_24"
+        android:icon="@drawable/bx_collection"
         android:id="@+id/browse"/>
+    <item
+        android:title="Home"
+        android:icon="@drawable/iconamoon_home"
+        android:id="@+id/home"/>
+    <item
+        android:title="Likes"
+        android:icon="@drawable/mdi_heart_outline"
+        android:id="@+id/likes"/>
+    <item
+        android:title="QR_Scanner"
+        android:icon="@drawable/fluent_scan_qr_code_24_filled"
+        android:id="@+id/qr_scanner"/>
+
+
+
 </menu>
