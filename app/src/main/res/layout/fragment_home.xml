@@ -57,31 +57,57 @@
                     android:scaleType="centerCrop" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Progress Bar -->
-            <TextView
-                android:id="@+id/stepCountText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5,839 museum steps"
-                android:textSize="18sp"
-                android:textColor="@color/colorOnSurface"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto_slab_medium"
-                android:layout_marginBottom="8dp" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
+            <!-- Steps Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/stepsCard"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:max="100"
-                android:progress="70"
-                android:secondaryProgress="80"
-                android:background="@drawable/progress_bar_background"
-                android:progressDrawable="@drawable/progress_bar_progress" />
+                android:elevation="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                android:clickable="true"
+                android:focusable="true">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
+                    <TextView
+                        android:id="@+id/stepCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5,839 museum steps"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorOnSurface"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_slab_medium"
+                        android:layout_marginBottom="8dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="8dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:max="100"
+                        android:progress="70"
+                        android:secondaryProgress="80"
+                        android:background="@drawable/progress_bar_background"
+                        android:progressDrawable="@drawable/progress_bar_progress" />
+
+                    <TextView
+                        android:id="@+id/viewStepsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View your steps"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- What's On Section -->
             <TextView
