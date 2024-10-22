@@ -40,6 +40,8 @@ android {
 
 dependencies {
 
+
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -53,5 +55,8 @@ dependencies {
 
     // AndroidX AppCompat to use AppCompatDelegate for dark mode handling
     implementation("androidx.appcompat:appcompat:1.6.1")
+
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation("com.android.support:multidex:1.0.3")
 
 }

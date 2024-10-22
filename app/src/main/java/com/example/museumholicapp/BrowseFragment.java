@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class BrowseFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
