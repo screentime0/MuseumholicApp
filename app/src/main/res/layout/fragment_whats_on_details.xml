@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/colorPrimaryDark">
+
+    <!-- Exhibition Image -->
+    <ImageView
+        android:id="@+id/exhibitionImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Exhibition Image" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/exhibitionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exhibition Title"
+        android:textSize="24sp"
+        android:textColor="@color/surface"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_slab_bold"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/exhibitionDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Exhibition details and description go here. You can provide more information about the artist, the exhibition timeline, and any other relevant content."
+        android:textSize="16sp"
+        android:textColor="@color/colorOnSurface"
+        android:fontFamily="@font/roboto_slab_medium"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Date & Location Info -->
+    <TextView
+        android:id="@+id/exhibitionDateLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dates: Oct 10, 2023 - Jan 15, 2024\nLocation: Main Gallery Hall"
+        android:textSize="16sp"
+        android:textColor="@color/colorOnSurface"
+        android:fontFamily="@font/roboto_slab_medium"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -77,6 +77,41 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        // Set onClick listener for the "What's On" cards
+        imagePlaceholder2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to WhatsOnDetailsFragment for Lee Bull exhibition
+                WhatsOnDetailsFragment whatsOnDetailsFragment = WhatsOnDetailsFragment.newInstance(
+                        R.drawable.whatson_lee_bull,
+                        "Lee Bull: Utopia",
+                        "Lee Bull is one of the most acclaimed artists in contemporary art, known for her provocative, immersive sculptures and installations.",
+                        "Dates: Oct 10, 2023 - Jan 15, 2024\nLocation: Main Gallery Hall");
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, whatsOnDetailsFragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        imagePlaceholder3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to WhatsOnDetailsFragment for Thomas Price exhibition
+                WhatsOnDetailsFragment whatsOnDetailsFragment = WhatsOnDetailsFragment.newInstance(
+                        R.drawable.whatson_thomas_price,
+                        "Thomas Price: Sculpting Identity",
+                        "Thomas Price explores the intricacies of human identity and power through his sculptures, challenging societal norms.",
+                        "Dates: Nov 15, 2023 - Feb 25, 2024\nLocation: North Wing");
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, whatsOnDetailsFragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
         return view;
     }
 }
