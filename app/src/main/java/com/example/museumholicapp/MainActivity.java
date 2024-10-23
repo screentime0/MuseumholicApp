@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             replaceFragment(new HomeFragment()); // Set initial fragment
+            // Set the middle item (home) as selected in BottomNavigationView
+            binding.bottomNavigationView.setSelectedItemId(R.id.home);
         }
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
