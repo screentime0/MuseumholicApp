@@ -1,14 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LikesFragment">
+    android:background="@color/colorPrimaryDark">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- Title for Saved Museums -->
+        <TextView
+            android:id="@+id/savedMuseumsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Museums"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/surface"
+            android:fontFamily="@font/roboto_slab_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="16dp" />
+
+        <!-- Card for National Gallery of Victoria -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNationalGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:layout_constraintTop_toBottomOf="@id/savedMuseumsTitle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageNationalGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="National Gallery of Victoria"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/visit_ngv2" />
+
+                <TextView
+                    android:id="@+id/textNationalGalleryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="National Gallery of Victoria"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurface"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/textNationalGalleryRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★★★★☆"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorOnSurface" />
+
+                <TextView
+                    android:id="@+id/textNationalGalleryHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open until 5pm"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorOnSurface" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Duplicate Card for Second Museum (Placeholder) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSecondMuseum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:layout_constraintTop_toBottomOf="@id/cardNationalGallery">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageSecondMuseum"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="Placeholder Museum"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+
+                <TextView
+                    android:id="@+id/textSecondMuseumName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Placeholder Museum"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurface"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/textSecondMuseumRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★★★★☆"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorOnSurface" />
+
+                <TextView
+                    android:id="@+id/textSecondMuseumHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open until 5pm"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorOnSurface" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title for Saved Items -->
+        <TextView
+            android:id="@+id/savedItemsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Items"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/surface"
+            android:fontFamily="@font/roboto_slab_bold"
+            app:layout_constraintTop_toBottomOf="@id/cardSecondMuseum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Gallery Layout for Saved Items -->
+        <GridLayout
+            android:id="@+id/gallerySavedItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            app:layout_constraintTop_toBottomOf="@id/savedItemsTitle"
+            android:layout_marginBottom="16dp">
+
+            <!-- Placeholder for Item 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/colorSurface"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Placeholder for Item 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/colorSurface"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Placeholder for Item 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/colorSurface"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Placeholder for Item 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/colorSurface"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Placeholder for Item 5 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/colorSurface"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Placeholder for Item 6 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@color/colorSurface"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
